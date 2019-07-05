@@ -1,6 +1,9 @@
 
 package logicBusiness;
 
+import data.Login;
+import java.io.IOException;
+
 /**
  *
  * @author JULIAN C
@@ -11,10 +14,16 @@ public class AnthropometryManager {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
+        Login login = new Login();
+        login.leer();
         
-        int i =0;
+        
+        while(login.isEnter()== true) {
+            login.validate();
+        }
+        
     }
     
 }
